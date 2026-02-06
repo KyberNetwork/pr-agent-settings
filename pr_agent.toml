@@ -1,0 +1,32 @@
+[config]
+trial_git_org_max_invokes_per_month = 99
+ignore_pr_title = ["^\\[Auto\\]", "^Auto", "^chore(\\(deps\\)|: bump)"]
+ignore_pr_labels = ["do-not-merge"]
+enable_auto_approval = True
+
+[pr_reviewer]
+enable_review_labels_effort = True
+
+[pr_compliance]
+enabled = False
+
+[pr_description]
+publish_labels = True
+
+[pr_code_suggestions]
+allow_thumbs_up_down = True
+
+[pr_implement]
+allow_agent_implementation = True
+
+[review_agent]
+enable_context_collector = True
+enable_history_context_collector = True
+enable_compliance_agent = False
+
+[github_app]
+pr_commands = [
+  '/describe --pr_description.final_update_message=false',
+  '/improve',
+  '/agentic_review'
+]
