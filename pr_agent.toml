@@ -1,6 +1,6 @@
 [config]
 trial_git_org_max_invokes_per_month = 99
-ignore_pr_title = ["^\\[Auto\\]", "^Auto", "^chore(\\(deps\\)|: bump)"]
+ignore_pr_title = ["^\\[?Auto", "^chore *(\\([^()]*\\))?:"]
 ignore_pr_labels = ["do-not-merge"]
 enable_auto_approval = True
 
